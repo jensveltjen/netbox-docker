@@ -4,7 +4,7 @@ services:
     ports:
     - 9090:9090
     volumes:
-    - netbox-data:netbox:z,ro
+    - netbox-data:netbox-data:z,ro
     - netbox-media-files:netbox-media:z,rw
     - netbox-reports-files:netbox-reports:z,rw
     - netbox-scripts-files:netbox-scripts:z,rw
