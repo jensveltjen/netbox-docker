@@ -2,23 +2,4 @@ version: '3.4'
 services:
   netbox:
     ports:
-    - 9090:9090
-    volumes:
-    - netbox-data:/var/lib/docker/volumes/netbox-data:z,ro
-    - netbox-media-files:/var/lib/docker/volumes/netbox-media:z,rw
-    - netbox-reports-files:/var/lib/docker/volumes/netbox-reports:z,rw
-    - netbox-scripts-files:/var/lib/docker/volumes/netbox-scripts:z,rw
-    healthcheck:
-      retries: 15
-  netbox-worker:
-    volumes:
-    - netbox-data:/var/lib/docker/volumes/netbox-data:z,ro
-    - netbox-media-files:/var/lib/docker/volumes/netbox-media:z,rw
-    - netbox-reports-files:/var/lib/docker/volumes/netbox-reports:z,rw
-    - netbox-scripts-files:/var/lib/docker/volumes/netbox-scripts:z,rw
-  netbox-housekeeping:
-    volumes:
-    - netbox-data:/var/lib/docker/volumes/netbox-data:z,ro
-    - netbox-media-files:/var/lib/docker/volumes/netbox-media:z,rw
-    - netbox-reports-files:/var/lib/docker/volumes/netbox-reports:z,rw
-    - netbox-scripts-files:/var/lib/docker/volumes/netbox-scripts:z,rw
+    - 9000:8080
