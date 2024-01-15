@@ -4,21 +4,21 @@ services:
     ports:
     - 9090:9090
     volumes:
-    - netbox:netbox:z,ro
-    - netbox-media-files:netbox-media:z,rw
-    - netbox-reports-files:netbox-reports:z,rw
-    - netbox-scripts-files:netbox-scripts:z,rw
+    - netbox-data:/var/lib/docker/volumes/netbox-data:z,ro
+    - netbox-media-files:/var/lib/docker/volumes/netbox-media:z,rw
+    - netbox-reports-files:/var/lib/docker/volumes/netbox-reports:z,rw
+    - netbox-scripts-files:/var/lib/docker/volumes/netbox-scripts:z,rw
     healthcheck:
       retries: 15
   netbox-worker:
     volumes:
-    - netbox-data:netbox:z,ro
-    - netbox-media-files:netbox-media:z,rw
-    - netbox-reports-files:netbox-reports:z,rw
-    - netbox-scripts-files:netbox-scripts:z,rw
+    - netbox-data:/var/lib/docker/volumes/netbox-data:z,ro
+    - netbox-media-files:/var/lib/docker/volumes/netbox-media:z,rw
+    - netbox-reports-files:/var/lib/docker/volumes/netbox-reports:z,rw
+    - netbox-scripts-files:/var/lib/docker/volumes/netbox-scripts:z,rw
   netbox-housekeeping:
     volumes:
-    - netbox-data:netbox:z,ro
-    - netbox-media-files:netbox-media:z,rw
-    - netbox-reports-files:netbox-reports:z,rw
-    - netbox-scripts-files:netbox-scripts:z,rw
+    - netbox-data:/var/lib/docker/volumes/netbox-data:z,ro
+    - netbox-media-files:/var/lib/docker/volumes/netbox-media:z,rw
+    - netbox-reports-files:/var/lib/docker/volumes/netbox-reports:z,rw
+    - netbox-scripts-files:/var/lib/docker/volumes/netbox-scripts:z,rw
